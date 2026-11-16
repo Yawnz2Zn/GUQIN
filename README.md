@@ -2,7 +2,7 @@
 
 古琴艺术网站：画卷、识琴、琴式、琴史、琴派、数字展览《弦上有象》、抚琴、文创。
 
-## https://yawnz2zn.github.io/-/
+## [https://yawnz2zn.github.io/-/](https://yawnz2zn.github.io/GUQIN/)
 
 ## 文件说明
 
