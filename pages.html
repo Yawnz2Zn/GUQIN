@@ -1,0 +1,187 @@
+<!-- ============ HOME ============ -->
+<section class="page" id="juan">
+  <div id="scroll">
+    <canvas id="scv"></canvas>
+    <svg id="figs" preserveAspectRatio="none"></svg>
+  </div>
+  <div id="homeTitle">
+    <h1>七弦有象</h1>
+    <div><span class="seal">太古<br>遗音</span><div class="sub">一张古琴的千年形与声<br>拖动画卷 · 访琴中高士</div></div>
+  </div>
+  <div id="homeHint" class="hint">点画中抚琴之人 · 听他说琴</div>
+  <div id="minimap"></div>
+</section>
+
+<!-- ============ KNOW ============ -->
+<section class="page" id="know">
+  <div class="wrap sec">
+    <div class="ptitle"><span class="seal">识琴</span><h2>一器三才</h2><p>琴者，禁也 —— 禁止于邪，以正人心</p></div>
+    <p class="lead">古琴七弦十三徽，通长约三尺六寸六分。面板拱圆，底板平直；首有岳山，尾有龙龈；腹中藏天柱、地柱，底开龙池、凤沼。它不仅是一件乐器，更是一套被造出来的“宇宙模型”：天地人、龙凤、山水，一一安放在这一张桐木之上。</p>
+    <div class="divider"></div>
+    <div class="chips" style="margin-bottom:14px"><button class="chip on" data-face="top">琴面</button><button class="chip" data-face="bottom">琴底</button><button class="chip" data-face="side">侧视</button></div>
+    <div class="anat card" id="anat" style="padding:20px 10px"><canvas id="anatCv"></canvas></div>
+    <div class="card infobox" id="anatInfo" style="margin-top:14px"><b>点选部位</b>琴的各部分多以人体、龙凤、山水命名：首、项、肩、腰、尾如人之形；龙池、凤沼、龙龈、凤足取象龙凤；岳山、承露如山与露。</div>
+  </div>
+  <div class="wrap sec" style="padding-top:20px">
+    <div class="ptitle"><span class="seal">三籁</span><h2>天 · 地 · 人</h2><p>泛音、散音、按音，一张琴发出三种声音</p></div>
+    <div class="grid3">
+      <div class="card sym"><div class="big">天</div><div class="kicker">泛音 · 天籁</div><p>左手轻点徽位，不按至面板，右手同时弹弦。声音清越空灵，如自天外来。泛音只在徽位上发出 —— 十三个徽，正是弦长的 1/8、1/6、1/5、1/4、1/3……的节点。</p><button class="btn sm" data-tone="fan">听泛音</button></div>
+      <div class="card sym"><div class="big">地</div><div class="kicker">散音 · 地籁</div><p>左手不按，右手直接弹空弦。声音浑厚沉着，如大地般稳。古琴定弦为“正调”，七根弦自外而内由低到高，散音构成五声音阶的骨架。</p><button class="btn sm" data-tone="san">听散音</button></div>
+      <div class="card sym"><div class="big">人</div><div class="kicker">按音 · 人籁</div><p>左手按弦至面板，右手弹弦，左手还可上下走动，发出吟、猱、绰、注之声。按音最富人情，如人之吟咏 —— 古琴“音少韵多”，余韵全在左手。</p><button class="btn sm" data-tone="an">听按音</button></div>
+    </div>
+    <div class="grid2" style="margin-top:34px">
+      <div class="card" style="padding:24px 26px;line-height:2;font-size:15px;color:var(--ink2)">
+        <div class="kicker" style="margin-bottom:8px">象天法地</div>
+        · 琴面圆拱象天，琴底平直象地<br>
+        · 通长三尺六寸六分，象一年三百六十六日<br>
+        · 十三徽，象十二月再加一闰月<br>
+        · 琴腹内有天柱、地柱，琴首有凤舌、凤额，琴尾有龙龈、焦尾<br>
+        · 额、颈、肩、腰，象人之体 —— 天地人和合于一器
+      </div>
+      <div class="card" style="padding:24px 26px;line-height:2;font-size:15px;color:var(--ink2)">
+        <div class="kicker" style="margin-bottom:8px">龙与凤 · 山与水</div>
+        · 凤：凤舌、凤额、凤翅、凤足<br>
+        · 龙：龙龈、龙腰、龙池<br>
+        · 池沼：琴底龙池在中、凤沼在尾，一大一小，出音之所<br>
+        · 山水：岳山与承露在首，如山之巅、露之所承<br>
+        · 七弦五音，宫商角徵羽，又附以文武二弦
+      </div>
+    </div>
+  </div>
+  <div class="wrap sec" style="padding-top:20px">
+    <div class="ptitle"><span class="seal">斫琴</span><h2>斫而为琴</h2><p>斫而为琴，弦而鼓之 ——《郁离子》</p></div>
+    <canvas id="zhuoCv" style="width:100%;height:260px;display:block" class="card"></canvas>
+    <div class="grid3" id="zhuoSteps" style="margin-top:20px;grid-template-columns:repeat(5,1fr)"></div>
+  </div>
+  <div class="wrap sec" style="padding-top:20px">
+    <div class="ptitle"><span class="seal">琴谱</span><h2>减字成谱</h2><p>不记音高记指法 —— 左上右下，一字一声</p></div>
+    <div class="grid2">
+      <div class="card" style="padding:24px 26px;font-size:15px;line-height:2;color:var(--ink2)">
+        古琴谱最早为“文字谱”，以文字详述每一个动作，现存唯一的唐人写本《碣石调·幽兰》即是此体。唐代以后渐演为“减字谱”：把指法、徽位、弦序的汉字各取一部分，拼成一个“字”。<br>
+        <b style="color:var(--ink)">上半</b>左为左手用指、右为徽位；<b style="color:var(--ink)">下半</b>为右手指法，弦序写在指法之内 —— 如“大七勾五”，“五”写在“勹”里。<br>
+        明代朱权编《神奇秘谱》（1425）是现存最早的古琴曲谱集，即以减字谱写成。
+        <table class="jzt"><tr><th colspan="2">左手四指</th><th colspan="2">右手四指八法</th></tr>
+        <tr><td><b>大</b></td><td>大指（拇指）</td><td>大指</td><td><b>尸</b> 擘（向内）　<b>乇</b> 托（向外）</td></tr>
+        <tr><td><b>亻</b></td><td>食指</td><td>食指</td><td><b>木</b> 抹（向内）　<b>乚</b> 挑（向外）</td></tr>
+        <tr><td><b>中</b></td><td>中指</td><td>中指</td><td><b>勹</b> 勾（向内）　剔（向外）</td></tr>
+        <tr><td><b>夕</b></td><td>名指（无名指）</td><td>名指</td><td><b>丁</b> 打（向内）　摘（向外）</td></tr></table>
+        <div style="font-size:13px;color:var(--ink3)">左右手小指均为“禁指”，不用。左手不按时写“<b>艹</b>”（散音）。</div>
+        <div style="margin-top:16px"><a class="btn sm zhu" href="#expo-jianzi">去展览里拼一个减字 →</a></div>
+      </div>
+      <div class="card" style="padding:20px"><canvas id="jzDemo" style="width:100%;height:330px;display:block"></canvas></div>
+    </div>
+  </div>
+  <div class="foot wrap"><span class="seal">琴象</span><br>七弦有象 · 古琴艺术</div>
+</section>
+
+<!-- ============ STYLES ============ -->
+<section class="page" id="styles">
+  <div class="wrap sec">
+    <div class="ptitle"><span class="seal">琴式</span><h2>琴式之辨</h2><p>同为七弦十三徽，形制却有五十余种</p></div>
+    <p class="lead">古琴的长短宽窄大体相同，变化集中在“项”与“腰”两处的弯入方式：方折、半月、连珠、波浪……历代琴谱如《太音大全》《风宣玄品》《文会堂琴谱》《古音正宗》《五知斋琴谱》都绘有“琴式图”，同一种琴式在不同琴谱里形状也不尽一致，可谓“琴式之变”。点选一式，看它的轮廓与故事。</p>
+    <div class="stygrid" id="styGrid" style="margin-top:34px"></div>
+    <div class="card stydetail" id="styDetail">
+      <canvas id="styBig"></canvas>
+      <div>
+        <div class="kicker" id="sdK"></div>
+        <h3 class="h-brush" id="sdT" style="font-size:54px;font-weight:400"></h3>
+        <p id="sdD" style="font-size:15px;line-height:2.05;color:var(--ink2);margin:12px 0 18px"></p>
+        <dl id="sdL" style="display:grid;grid-template-columns:90px 1fr;gap:8px 14px;font-size:14px;line-height:1.8;color:var(--ink2)"></dl>
+        <div style="margin-top:22px" class="kicker">叠影比较 —— 拖动看两式之间的渐变</div>
+        <div style="display:flex;gap:10px;align-items:center;margin-top:10px">
+          <span id="mA" style="font-family:var(--kai)"></span>
+          <input type="range" class="range" id="morph" min="0" max="100" value="0">
+          <select id="mB2" style="font-family:var(--kai);padding:4px;background:transparent;border:1px solid rgba(90,70,50,.35)"></select>
+        </div>
+        <div style="margin-top:18px;display:flex;gap:10px"><button class="btn sm" id="styPlay">♪ 听此式之声</button><a class="btn sm zhu" href="#expo-forms">进入《千形一琴》交互</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot wrap"><span class="seal">琴象</span><br>七弦有象 · 古琴艺术</div>
+</section>
+
+<!-- ============ HISTORY ============ -->
+<section class="page" id="history">
+  <div class="wrap sec" style="padding-bottom:0">
+    <div class="ptitle"><span class="seal">琴史</span><h2>三千年琴事</h2><p>从“削桐为琴”到飞向太空的《流水》</p></div>
+    <p class="lead">琴在先秦与瑟并称，在两汉被推为“八音之首”，于魏晋定型，在唐宋臻于工艺与琴曲的高峰，至明清琴谱刊刻大兴、琴派林立。它从乐工之手走到文人之笔，成为士人修身的“载道之器”。左右拖动长卷。</p>
+  </div>
+  <div class="tl" id="tl"><div class="tl-in" id="tlIn"></div></div>
+  <div class="wrap sec">
+    <div class="ptitle"><span class="seal">名琴</span><h2>传世名琴</h2><p>古人为琴命名，如为知己取字</p></div>
+    <div class="mq" id="mq"></div>
+    <div class="card" style="padding:22px 26px;margin-top:24px;font-size:15px;line-height:2;color:var(--ink2)">
+      <span class="kicker">琴名之雅</span>&nbsp;&nbsp;九霄环佩、玲珑玉、寒玉、松雪、号钟、鹤鸣、春雷、怀古、太古遗音、大雅、雪夜钟、鸣玉、龙吟、琳琅、清角、静友、松仙……一张琴的名字，往往就是一首短诗。
+    </div>
+  </div>
+  <div class="foot wrap"><span class="seal">琴象</span><br>七弦有象 · 古琴艺术</div>
+</section>
+
+<!-- ============ SCHOOLS ============ -->
+<section class="page" id="schools">
+  <div class="wrap sec">
+    <div class="ptitle"><span class="seal">琴派</span><h2>琴派流衍</h2><p>“风格因地而殊，传授因人而异”</p></div>
+    <p class="lead">宋代已有“京师、两浙、江西”之分；明清以后，琴人以地域与师承结社，形成虞山、广陵、浙、蜀、诸城、梅庵、岭南、九嶷等派。近现代以来，各派琴家又以打谱、录音、教学，把古琴带进了音乐学院与世界舞台。</p>
+    <canvas class="tree card" id="tree" style="margin-top:30px;height:440px"></canvas>
+    <div class="school" id="schoolCards" style="margin-top:30px"></div>
+  </div>
+  <div class="wrap sec" style="padding-top:10px">
+    <div class="ptitle"><span class="seal">琴家</span><h2>近现代琴家</h2><p>古调今弹，薪火相传</p></div>
+    <div class="people" id="people"></div>
+  </div>
+  <div class="foot wrap"><span class="seal">琴象</span><br>七弦有象 · 古琴艺术</div>
+</section>
+
+<!-- ============ EXPO ============ -->
+<section class="page" id="expo">
+  <div class="exhero">
+    <div class="film" id="heroFilm"></div>
+    <div class="meta">
+      <div>
+        <div class="kicker" style="color:#c9a77a">古琴数字艺术展</div>
+        <h2>弦上有象</h2>
+        <div class="en">IMAGES ON SEVEN STRINGS · A DIGITAL EXHIBITION OF THE GUQIN</div>
+        <div class="halls" id="halls"></div>
+      </div>
+      <p>琴是“有数”的：十三徽是弦长的比例，七弦是五声的排列，减字谱是手指的编码。可琴又在“弦外”：同样的数，经由不同的手，便成了不同的声音与心境。本展以六件数字作品，把古琴的形、数、声、谱、器一一拆开，又请你亲手合上 —— 看懂之后，再去抚一张属于自己的琴。</p>
+    </div>
+  </div>
+  <div class="wrap" id="works"></div>
+  <div class="wrap" style="text-align:center;padding:60px 0 10px"><a class="btn zhu" href="#play">看懂了 · 去抚琴 →</a>&nbsp;&nbsp;<a class="btn" href="#shop">把展览带回家 · 文创 →</a></div>
+  <div class="foot wrap"><span class="seal">琴象</span><br>七弦有象 · 古琴艺术</div>
+</section>
+
+<!-- ============ PLAY ============ -->
+<section class="page" id="play">
+  <div class="wrap sec">
+    <div class="ptitle"><span class="seal">抚琴</span><h2>左按右弹</h2><p>古琴从来是两只手的事</p></div>
+    <p class="lead" style="max-width:none">右手在岳山与一徽之间弹弦，左手在徽位上按、点、走。右手只管“发声”，左手决定“什么声”。这里有三种方式让你的两只手各司其职：键盘双手、键盘＋鼠标，或者打开摄像头，用真实的左右手隔空抚琴。</p>
+    <div class="modes"><button class="chip on" data-mode="free">自由弹奏</button><button class="chip" data-mode="learn">跟学指法</button><button class="chip" data-mode="cam">摄像头手势</button></div>
+    <div id="playStage"><canvas id="playCv"></canvas><video id="camv" playsinline muted></video></div>
+    <div class="card lesson" id="lesson" style="display:none"><div class="jzp" id="lsJ"></div><div><div class="step" id="lsT"></div><div style="font-size:13px;color:var(--ink3);margin-top:4px" id="lsH"></div></div><div class="prog" id="lsP"></div><button class="btn sm" id="lsN">下一组</button></div>
+    <div class="howto">
+      <div class="card"><h4>右手 · 弹弦</h4>
+        键盘：<kbd>H</kbd><kbd>J</kbd><kbd>K</kbd><kbd>L</kbd><kbd>;</kbd><kbd>'</kbd><kbd>Enter</kbd> 依次为一弦至七弦（一弦最粗、最远，七弦最细、最近）。<br>
+        鼠标：在弦上点击即“勾”，按住划过多根弦即“拂”“历”。</div>
+      <div class="card"><h4>左手 · 按徽</h4>
+        不按任何键 = <b>散音</b>；按住 <kbd>Q</kbd><kbd>W</kbd><kbd>E</kbd><kbd>R</kbd><kbd>T</kbd> = 十三、十二、十一、十、九徽，<kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><kbd>F</kbd><kbd>G</kbd> = 八、七、六、五、四徽 → <b>按音</b>；同时按住 <kbd>Shift</kbd> = 轻点 → <b>泛音</b>。<br>
+        弦声未尽时换按另一徽 = <b>上 / 下</b>（走手音）；按 <kbd>Z</kbd> = 吟，<kbd>X</kbd> = 猱。</div>
+      <div class="card"><h4>摄像头 · 隔空抚琴</h4>
+        画面左侧的手是你的<b>左手</b>：食指指尖左右移动即在琴上滑动徽位，拇指与食指捏合 = 泛音，手抬离琴面 = 散音。<br>
+        画面右侧的手是你的<b>右手</b>：食指指尖上下划过哪根弦，就弹哪根弦。</div>
+      <div class="card"><h4>正调 · 七弦</h4>
+        一弦至七弦依次为 徵 · 羽 · 宫 · 商 · 角 · 徵 · 羽（简谱 5 6 1 2 3 5 6）。十三徽按音分别对应弦长的 7/8、5/6、4/5、3/4、2/3、3/5、1/2……与泛音节点同在一处。</div>
+    </div>
+  </div>
+  <div class="foot wrap"><span class="seal">琴象</span><br>七弦有象 · 古琴艺术</div>
+</section>
+
+<!-- ============ SHOP ============ -->
+<section class="page" id="shop">
+  <div class="wrap sec">
+    <div class="ptitle"><span class="seal">文创</span><h2>琴物</h2><p>二十件古琴文创 · 点右上角“✓”挑出心仪之物</p></div>
+    <div class="shopbar"><div class="chips" id="shopCats"></div><span style="margin-left:auto;font-size:13px;color:var(--ink3)" id="shopCount"></span></div>
+    <div class="prods" id="prods"></div>
+  </div>
+  <div class="foot wrap"><span class="seal">琴象</span><br>七弦有象 · 古琴艺术</div>
+</section>
