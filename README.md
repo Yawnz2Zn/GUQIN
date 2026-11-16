@@ -2,11 +2,7 @@
 
 古琴艺术网站：画卷、识琴、琴式、琴史、琴派、数字展览《弦上有象》、抚琴、文创。
 
-## 发布到 GitHub Pages
-
-1. 新建一个 Public 仓库，把本文件夹里的全部文件上传（`index.html` 必须在仓库根目录）。
-2. 仓库 Settings → Pages → Branch 选 `main`，文件夹选 `/ (root)` → Save。
-3. 一两分钟后，页面顶部会显示网址：`https://用户名.github.io/仓库名/`。
+## https://yawnz2zn.github.io/-/
 
 ## 文件说明
 
